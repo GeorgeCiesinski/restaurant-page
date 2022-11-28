@@ -1,0 +1,12 @@
+Setup webpack
+
+1. SASS
+
+https://www.developerhandbook.com/webpack/how-to-configure-scss-modules-for-webpack/
+https://dev.to/deepanjangh/setting-up-css-and-sass-with-webpack-3cg
+
+2. Assets
+
+3. output
+
+4. Development
