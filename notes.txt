@@ -5,7 +5,7 @@ Setup webpack
 https://www.developerhandbook.com/webpack/how-to-configure-scss-modules-for-webpack/
 https://dev.to/deepanjangh/setting-up-css-and-sass-with-webpack-3cg
 
-2. Assets
+2. Assets (Complete)
 
 3. output
 

@@ -4,3 +4,12 @@ import "./main.scss";
 
 const content = document.getElementById("content");
 
+const newBut = document.createElement("button");
+newBut.textContent = "Click me";
+newBut.addEventListener("click", function() {
+    cosnole.log("F");
+});
+
+content.appendChild(newBut);
+
+console.log("F");
