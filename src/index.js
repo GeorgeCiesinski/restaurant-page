@@ -11,5 +11,3 @@ newBut.addEventListener("click", function() {
 });
 
 content.appendChild(newBut);
-
-console.log("F");
