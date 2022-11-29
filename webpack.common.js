@@ -2,7 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
   entry: './src/index.js',
   plugins: [
     new HtmlWebpackPlugin({  // Creates a new index.html file
@@ -10,11 +9,6 @@ module.exports = {
       template: "./src/template.html"  // Uses basic template
     })
   ],
-  output: {
-    filename: 'bundle.[contentHash].js',
-    path: path.resolve(__dirname, 'dist'),
-    clean: true,  // Cleans dist folder before creating new bundle
-  },
   module: {
     rules: [
       {

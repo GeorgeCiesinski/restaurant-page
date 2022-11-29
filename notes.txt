@@ -1,6 +1,6 @@
 Setup webpack
 
-1. SASS
+1. SASS (Complete)
 
 https://www.developerhandbook.com/webpack/how-to-configure-scss-modules-for-webpack/
 https://dev.to/deepanjangh/setting-up-css-and-sass-with-webpack-3cg
