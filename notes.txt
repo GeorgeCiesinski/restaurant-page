@@ -9,4 +9,4 @@ https://dev.to/deepanjangh/setting-up-css-and-sass-with-webpack-3cg
 
 3. output
 
-4. Development
+4. Development (Complete)
