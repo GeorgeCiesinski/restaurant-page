@@ -13,4 +13,16 @@ module.exports = merge(common, {
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: "img/[name][ext]",  // bundle images with hash in name
   },
+  module: {
+    rules: [
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          "style-loader",  // 3. Inject styles into DOM
+          "css-loader",    // 2. Turn CSS into commonJS
+          "sass-loader",   // 1. Turn SASS into CSS
+        ]
+      }
+    ]
+  }
 });
