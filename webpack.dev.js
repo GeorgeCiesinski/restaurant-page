@@ -11,7 +11,7 @@ module.exports = merge(common, {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    assetModuleFilename: "img/[name][ext]",  // bundle images with hash in name
+    assetModuleFilename: "img/[name][ext]",  // bundle images
   },
   module: {
     rules: [

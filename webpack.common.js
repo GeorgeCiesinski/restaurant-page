@@ -2,7 +2,11 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    main: './src/index.js',
+    baseLayout: './src/baseLayout.js',
+    copyright: './src/copyright.js'
+  },
   plugins: [
     new HtmlWebpackPlugin({  // Creates a new index.html file
       title: "Restaurant Page",
@@ -21,4 +25,7 @@ module.exports = {
       },
     ],
   },
+  optimization: {
+    runtimeChunk: 'single',  // For multiple entry points
+  }
 };

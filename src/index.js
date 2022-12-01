@@ -1,13 +1,11 @@
-import "./main.scss";
+import "./main.scss";  // Styling
+import baseLayout from './baseLayout';
 
-// Temporary code to test assets
+console.log("From index");
 
-const content = document.getElementById("content");
+baseLayout.displayAlert();
 
-const newBut = document.createElement("button");
-newBut.textContent = "Click me";
-newBut.addEventListener("click", function() {
-    cosnole.log("F");
-});
+// Get DOM elements
+// const content = document.getElementById("content");
 
-content.appendChild(newBut);
+// Generate Layout
