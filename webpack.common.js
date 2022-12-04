@@ -5,7 +5,10 @@ module.exports = {
   entry: {
     main: './src/index.js',
     baseLayout: './src/baseLayout.js',
-    copyright: './src/copyright.js'
+    copyright: './src/copyright.js',
+    home: './src/home.js',
+    menu: './src/menu.js',
+    contact: './src/contact.js'
   },
   plugins: [
     new HtmlWebpackPlugin({  // Creates a new index.html file

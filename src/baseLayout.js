@@ -1,26 +1,13 @@
 import copyright from './copyright';
+import home from './home';
+import menu from './menu';
+import contact from './contact';
 
 // Creates primary website layout
 const baseLayout = (function() {
 
-    // Private function that creates navbar
-    function _nav(domElement) {
-        // Create unordered list and list items
-        const linkList = document.createElement("ul");
-        const linkHome = document.createElement("li");
-        const linkMenu = document.createElement("li");
-        const linkContact = document.createElement("li");
-        // Add hyperlinks
-        linkHome.innerHTML = '<a href="#">Home</a>';
-        linkMenu.innerHTML = '<a href="#">Menu</a>';
-        linkContact.innerHTML = '<a href="#">Contact</a>';
-        // Append to ul
-        linkList.appendChild(linkHome);
-        linkList.appendChild(linkMenu);
-        linkList.appendChild(linkContact);
-        // Append to dom
-        domElement.appendChild(linkList);
-    }
+    // Public content element variable - assigned when baseLayout is created
+    let _content = null;
 
     // Creates the header, content and footer sections of the site
     function create() {
@@ -28,7 +15,7 @@ const baseLayout = (function() {
         // Get body
         const body = document.body;
     
-        // Create header
+        /* Header */
         const header = document.createElement("header");
         // Top Header
         const headerTop = document.createElement("div");
@@ -44,12 +31,12 @@ const baseLayout = (function() {
         header.appendChild(headerBottom);
         body.appendChild(header);
     
-        // Create content div
-        const content = document.createElement("div"); 
-        content.id = "content";
-        body.appendChild(content);
+        /* Content */
+        _content = document.createElement("div"); 
+        _content.id = "content";
+        body.appendChild(_content);
     
-        // Create footer
+        /* Footer */
         const footer = document.createElement("footer");
         const copyrightMessage = document.createElement("h6");
         copyrightMessage.innerHTML = copyright.generate();
@@ -57,9 +44,46 @@ const baseLayout = (function() {
         body.appendChild(footer);
     }
 
+    // Private navbar generator
+    function _nav(domElement) {
+        const navigation = document.createElement("div");
+        navigation.setAttribute("role", "navigation");
+        // Button name and function call
+        const navElements = [
+            {
+                "name": "home",
+                "function": home.generate
+            },
+            {
+                "name": "menu",
+                "function": menu.generate
+            },
+            {
+                "name": "contact",
+                "function": contact.generate
+            }
+        ];
+        // Creates a button for every navElement specified above
+        navElements.forEach(function(item) {
+            const newButton = document.createElement("button");
+            newButton.addEventListener("click", item["function"]);
+            newButton.textContent = item["name"];
+            navigation.append(newButton);
+        });
+        // Appends to the provided dom element
+        domElement.append(navigation);
+    }
+
+    function clearContent() {
+        while (_content.firstChild) {
+            _content.removeChild(_content.lastChild);
+        }
+    }
+
     // Reveals public functions and variables
     return {
         create: create,
+        clearContent: clearContent
     }
     
 })();

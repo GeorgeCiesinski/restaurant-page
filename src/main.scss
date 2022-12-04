@@ -87,63 +87,48 @@ h6 {
 $header-footer-color: orange;
 $content-background-color: lightgrey;
 $header-button-color: lightcoral;
-$header-button-font: black;
+$header-button-font-color: black;
+$font-color-primary: black;
+
+// Sizes
+$content-width: 65vw;
+$side-padding: calc((100vw - $content-width) / 2);
 
 // Header and Footer
 header, footer {
     background-color: $header-footer-color;
 }
-
 header>.top, header>.bottom {
     display: flex;
     justify-content: center;
 }
-
+// Site Title
 header>.top>h1 {
     margin: 5px;
 }
 
-// Nav Bar
-header>.bottom>ul {
-    display: flex;
-    gap: 10px;
-    margin: 5px;
-}
-// List items
-header>.bottom>ul>li {
-    list-style: none;
-    background-color: $header-button-color;
-    padding: 5px;
-}
-// Links
-header>.bottom>ul>li>a {
-    color: $header-button-font;
-    font-size: 125%;
-    text-decoration: none;
-}
-// header>.bottom>ul>li>a:visited {
-//     color: grey;
-// }
-header>.bottom>ul>li>a:hover {
-    text-decoration: underline;
-}
-header>.bottom>ul>li>a:active {
-    text-decoration: underline;
-}
-
+// Footer
 footer {
     display: flex;
     justify-content: center;
 }
 footer>h6 {
-    margin: 10px;
+    margin: 20px;
 }
-
-#content {
-    height: auto;
+.github-link {
+    color: $font-color-primary;
 }
 
 // Content
 #content {
     flex: 1;
+    width: $content-width;
+    padding: 20px $side-padding 20px $side-padding;
+}
+.content-card {
+    background-color: lightgrey;
+    border: 1px solid lightgrey;
+    border-radius: 25px;
+    padding: 20px;
+    
 }
