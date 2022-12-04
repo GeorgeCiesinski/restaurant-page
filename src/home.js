@@ -4,15 +4,13 @@ import baseLayout from './baseLayout';
 const home = (function() {
 
     function generate() {
-        // Get content element
-        baseLayout.clearContent();
-        const _content = document.getElementById("content");
+        baseLayout.clearContent();  // Clear content children
         const contentCard = document.createElement("div");
         contentCard.classList.add("content-card");
         const firstParagraph = document.createElement("p");
         firstParagraph.textContent = "We are the #1 best french restaurant in the world";
         contentCard.appendChild(firstParagraph);
-        _content.appendChild(contentCard);
+        this.appendChild(contentCard);
     }
 
     return {

@@ -4,15 +4,13 @@ import baseLayout from './baseLayout';
 const menu = (function() {
 
     function generate() {
-        // Get content element
-        baseLayout.clearContent();
-        const _content = document.getElementById("content");
+        baseLayout.clearContent();  // Clear content children
         const contentCard = document.createElement("div");
         contentCard.classList.add("content-card");
         const firstParagraph = document.createElement("p");
         firstParagraph.textContent = "Menu";
         contentCard.appendChild(firstParagraph);
-        _content.appendChild(contentCard);
+        this.appendChild(contentCard);
     }
 
     return {

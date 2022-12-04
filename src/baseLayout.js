@@ -6,8 +6,8 @@ import contact from './contact';
 // Creates primary website layout
 const baseLayout = (function() {
 
-    // Public content element variable - assigned when baseLayout is created
-    let _content = null;
+    let _content = document.createElement("div");
+    const _title = "La Foodery Extraordinaire";
 
     // Creates the header, content and footer sections of the site
     function create() {
@@ -21,7 +21,7 @@ const baseLayout = (function() {
         const headerTop = document.createElement("div");
         headerTop.classList.add("top");
         const restaurantName = document.createElement("h1");
-        restaurantName.textContent = "La Foodery Extraordinaire";
+        restaurantName.textContent = _title;
         headerTop.appendChild(restaurantName);
         header.appendChild(headerTop);
         // Bottom Header
@@ -32,7 +32,6 @@ const baseLayout = (function() {
         body.appendChild(header);
     
         /* Content */
-        _content = document.createElement("div"); 
         _content.id = "content";
         body.appendChild(_content);
     
@@ -66,7 +65,7 @@ const baseLayout = (function() {
         // Creates a button for every navElement specified above
         navElements.forEach(function(item) {
             const newButton = document.createElement("button");
-            newButton.addEventListener("click", item["function"]);
+            newButton.addEventListener("click", item["function"].bind(_content));  // Binds _content to 'this' keyword
             newButton.textContent = item["name"];
             navigation.append(newButton);
         });
