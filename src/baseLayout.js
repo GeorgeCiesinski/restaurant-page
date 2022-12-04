@@ -73,6 +73,12 @@ const baseLayout = (function() {
         domElement.append(navigation);
     }
 
+    // Generates home page on first launch
+    function homePage() {
+        home.generate.bind(_content)();
+    }
+
+    // Clears _content element
     function clearContent() {
         while (_content.firstChild) {
             _content.removeChild(_content.lastChild);
@@ -82,6 +88,7 @@ const baseLayout = (function() {
     // Reveals public functions and variables
     return {
         create: create,
+        homePage: homePage,
         clearContent: clearContent
     }
     
