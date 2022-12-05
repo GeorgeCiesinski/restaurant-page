@@ -7,7 +7,7 @@ import contact from './contact';
 const baseLayout = (function() {
 
     let _content = document.createElement("div");
-    const _title = "La Foodery Extraordinaire";
+    const _title = "Un Restaurant Français Extraordinaire";
 
     // Creates the header, content and footer sections of the site
     function create() {
@@ -47,6 +47,7 @@ const baseLayout = (function() {
     function _nav(domElement) {
         const navigation = document.createElement("div");
         navigation.setAttribute("role", "navigation");
+        navigation.id = "nav";
         // Button name and function call
         const navElements = [
             {

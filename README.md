@@ -56,3 +56,10 @@ Despite this, I spent the first days experiencing bug after bug before I even go
 I have used SASS for the last few projects I worked on. After experiencing the headache that is raw CSS, especially in projects that used SASS libraries like Bootstrap, I vowed to never go back (unless my future boss ordered me to lol). So I got to work, and quickly realized I need a SASS compiler like [Koala App](http://koala-app.com/) to turn the SASS into CSS the website can understand. Well, in this project, I found out that I have been using SASS wrong. Sure, it was working, but I was using CSS in a lot of cases where SASS has built in functions, or its own way of doing things. For example, I was using clunky CSS variables when I could have used the simpler and easier to understand SASS variables.
 
 Another thing I discovered is that Koala App was a deprecated tool despite how well it has served me. Well, thankfully, there was a solution for that! The Webpack tool I discovered earlier had a loader for SASS, and you can chain it with a few other loaders to turn your SASS into bundled CSS. Really cool!
+
+# Credits
+
+French Cuisine photo by <a href="https://unsplash.com/es/@jaywennington?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jay Wennington</a> on <a href="https://unsplash.com/s/photos/french-cuisine?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
+Background photo by <a href="https://unsplash.com/@peterlaster?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pedro Lastra</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
