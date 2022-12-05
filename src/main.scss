@@ -89,7 +89,7 @@ $content-background-color: lightgrey;
 $header-button-color: lightcoral;
 $header-button-font-color: black;
 $font-color-primary: black;
-$content-color: rgba(211, 211, 211, 0.500);
+$content-color: rgba(211, 211, 211, 0.600);
 
 // Sizes
 $content-width: 65vw;
@@ -131,29 +131,28 @@ footer>h6 {
 // Content
 #content {
     flex: 1;
+    background-image: url(./assets/img/french-landscape.jpg);
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     width: $content-width;
     padding: 20px $side-padding 20px $side-padding;
-    background: url(./assets/img/french-landscape.jpg);
 }
 
 // Content Card
 .content-card {
     background-color: $content-color;
-    border: 1px solid $content-color;
     border-radius: 25px;
-    padding: 20px;
+    padding: 20px 0px 20px 0px;
     text-align: center;
 }
-.content-card>p {
-    margin: 10px;
+.content-card>p, .content-card>img, .content-card>figure {
+    margin: 10px 0px 10px 0px;
 }
 .content-card>img {
     max-width: 90%;
     border-radius: 10px;
-    margin: 10px;
-}
-.content-card>figure {
-    margin: 10px;
 }
 
 // Figure

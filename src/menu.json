@@ -1,0 +1,14 @@
+{
+    "menu": [
+        {
+            "name": "Croissant",
+            "description": "Bread",
+            "price": "$120"
+        },
+        {
+            "name": "Soupe à l'oignon",
+            "description": "Onion Soup",
+            "price": "$175"
+        }
+    ]
+}

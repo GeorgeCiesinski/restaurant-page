@@ -1,5 +1,5 @@
 import baseLayout from './baseLayout';
-import frenchCuisine from './assets/img/french-cuisine.jpg';
+import FrenchCuisine from './assets/img/french-cuisine.jpg';
 
 // Home content
 const home = (function() {
@@ -24,7 +24,7 @@ const home = (function() {
 
         // Image
         const image = new Image();
-        image.src = frenchCuisine;
+        image.src = FrenchCuisine;
         contentCard.appendChild(image);
 
         // Paragraph
