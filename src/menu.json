@@ -1,14 +1,74 @@
 {
     "menu": [
         {
-            "name": "Croissant",
-            "description": "Bread",
-            "price": "$120"
+            "course": "Hors D'oeuvre", 
+            "items": [
+                {
+                    "name": "Croissant",
+                    "description": "Bread",
+                    "price": "$120"
+                },
+                {
+                    "name": "Huitres",
+                    "description": "Delicious Oysters",
+                    "price": "$300"
+                }
+            ]
         },
         {
-            "name": "Soupe à l'oignon",
-            "description": "Onion Soup",
-            "price": "$175"
+            "course": "Potage",
+            "items": [
+                {
+                    "name": "Soupe à l'oignon",
+                    "description": "Onion Soup",
+                    "price": "$175"
+                },
+                {
+                    "name": "Vichyssoise",
+                    "description": "Thick chicken vegetable soup",
+                    "price": "$200"
+                }
+            ]
+        },
+        {
+            "course": "Le Plat Principal",
+            "items": [
+                {
+                    "name": "Coq au vin",
+                    "description": "Chicken braised with Wine",
+                    "price": "$500"
+                }
+            ]
+        },
+        {
+            "course": "Salades",
+            "items": [
+                {
+                    "name": "Salade Niçoise",
+                    "description": "Salad from the French city of Nice",
+                    "price": "$350"
+                },
+                {
+                    "name": "Salade au chèvre chaud",
+                    "description": "Green salad with goat cheese",
+                    "price": "$375"
+                }
+            ]
+        },
+        {
+            "course": "Entremets",
+            "items": [
+                {
+                    "name": "Crème brûlée",
+                    "description": "Custard with caramelized top layer",
+                    "price": "$200"
+                },
+                {
+                    "name": "Crêpe aux fraises",
+                    "description": "A delicious crepe with strawberry",
+                    "price": "$275"
+                }
+            ]
         }
     ]
 }
