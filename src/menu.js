@@ -7,8 +7,6 @@ const menu = (function() {
     function generate() {
         baseLayout.clearContent();  // Clear content children
 
-        console.log(Menu.menu);
-
         const contentCard = document.createElement("div");
         contentCard.classList.add("content-card");
 

@@ -54,7 +54,7 @@ STYLING
 */
 
 // Colors
-$transparent-color: rgba(211, 211, 211, 0.500);
+$transparent-color: rgba(211, 211, 211, 0.700);
 $content-background-color: lightgrey;
 $header-button-color: lightcoral;
 $header-button-font-color: black;
@@ -74,12 +74,18 @@ $border-radius: 10px;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
+// This div stays fixed in the background
 .background {
     position: fixed;
     height: 100vh;
@@ -102,7 +108,7 @@ h1, h2, h3, h4, h5, h6 {
 
 // Header and Footer
 header, footer {
-    background-color: rgba(211, 211, 211, 0.600);
+    background-color: $transparent-color;
 }
 header>.top, header>.bottom {
     display: flex;
@@ -164,7 +170,7 @@ footer>h4 {
 
 // Content Card
 .content-card {
-    background-color: rgba(211, 211, 211, 0.600);
+    background-color: $transparent-color;
     border-radius: $border-radius;
     padding: 20px 0px 20px 0px;
     text-align: center;
@@ -175,9 +181,9 @@ footer>h4 {
 .content-card>p, .content-card>img, .content-card>figure {
     margin: 10px 0px 10px 0px;
 }
-.content-card>img {
+.content-card>img, .map>iframe {
     max-width: 90%;
-    border-radius: 10px;
+    border-radius: $border-radius;
 }
 
 // Figure
@@ -223,10 +229,4 @@ figcaption:before {
 .item-price {
     grid-column: 2 / 3;
     grid-row: 1 / 3;
-}
-
-// Contact
-.map>iframe {
-    border-radius: $border-radius;
-    max-width: 90%;
 }
