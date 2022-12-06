@@ -54,12 +54,12 @@ STYLING
 */
 
 // Colors
-$header-footer-color: rgba(211, 211, 211, 0.300);
+$transparent-color: rgba(211, 211, 211, 0.500);
 $content-background-color: lightgrey;
 $header-button-color: lightcoral;
 $header-button-font-color: black;
 $font-color-primary: black;
-$content-color: rgba(211, 211, 211, 0.600);
+$font-color-secondary: white;
 // French Flag
 $flag-blue: rgba(0, 38, 84);
 $flag-white: rgba(255, 255, 255);
@@ -102,7 +102,7 @@ h1, h2, h3, h4, h5, h6 {
 
 // Header and Footer
 header, footer {
-    background-color: $header-footer-color;
+    background-color: rgba(211, 211, 211, 0.600);
 }
 header>.top, header>.bottom {
     display: flex;
@@ -119,23 +119,28 @@ header>.top>h1 {
 }
 // Nav
 #nav>button {
-    width: 125px;
+    color: $font-color-secondary;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 125%;
+    text-shadow: -1px -1px $font-color-primary, 1px -1px $font-color-primary, -1px 1px $font-color-primary, 1px 1px $font-color-primary;
+    width: 125px;
+    border-radius: $border-radius;
+    transition: 0.5s;
+}
+#nav>button:hover {
+    transform: scale(1.05);
 }
 .button-blue {
     background-color: $flag-blue;
     border: 1px solid $flag-blue;
-    border-radius: $border-radius;
 }
 .button-white {
     background-color: $flag-white;
     border: 1px solid $flag-white;
-    border-radius: $border-radius;
 }
 .button-red {
     background-color: $flag-red;
     border: 1px solid $flag-red;
-    border-radius: $border-radius;
 }
 
 // Footer
@@ -159,7 +164,7 @@ footer>h4 {
 
 // Content Card
 .content-card {
-    background-color: $content-color;
+    background-color: rgba(211, 211, 211, 0.600);
     border-radius: $border-radius;
     padding: 20px 0px 20px 0px;
     text-align: center;
