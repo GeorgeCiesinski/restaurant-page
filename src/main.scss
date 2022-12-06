@@ -66,7 +66,7 @@ $flag-white: rgba(255, 255, 255);
 $flag-red: rgba(237, 41, 57);
 
 // Sizes
-$content-width: 65vw;
+$content-width: 55vw;
 $side-padding: calc((100vw - $content-width) / 2);
 $border-radius: 10px;
 
@@ -170,19 +170,19 @@ footer>h4 {
 
 // Content Card
 .content-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: $transparent-color;
     border-radius: $border-radius;
     padding: 20px 0px 20px 0px;
-    text-align: center;
 }
-.content-card>h2 {
-    margin: 10px 0px 10px 0px;
-}
-.content-card>p, .content-card>img, .content-card>figure {
+.content-card>h2, .content-card>p, .content-card>img, .content-card>figure .map>iframe {
+    max-width: 90%;
     margin: 10px 0px 10px 0px;
 }
 .content-card>img, .map>iframe {
-    max-width: 90%;
+    
     border-radius: $border-radius;
 }
 
@@ -205,15 +205,21 @@ figcaption:before {
 .menu {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 0px 100px 0px 100px;
+    gap: 20px;
+}
+
+.course, .course>h3, .course-item {
+    margin: 10px 0px 10px 0px;
+}
+
+.course>h3 {
+    text-align: center;
 }
 
 .course-item {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: max-content max-content;
-    margin: 10px 0px 10px 0px;
 }
 
 .item-name {
@@ -227,6 +233,7 @@ figcaption:before {
 }
 
 .item-price {
+    text-align: end;
     grid-column: 2 / 3;
     grid-row: 1 / 3;
 }

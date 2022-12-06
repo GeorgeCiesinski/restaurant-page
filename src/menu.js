@@ -20,13 +20,13 @@ const menu = (function() {
         menuCards.classList.add("menu");
         Menu.menu.forEach(function(menuItem) {
             // New Course
-            const menuCard = document.createElement("div");
-            menuCard.classList.add("course");
-            const course = document.createElement("h3");  // Course Header
-            course.textContent = menuItem.course;
+            const course = document.createElement("div");
+            course.classList.add("course");
+            const courseHeader = document.createElement("h3");  // Course Header
+            courseHeader.textContent = menuItem.course;
+            course.appendChild(courseHeader);
             _courseItems(course, menuItem.items);  // Add items to course
-            menuCard.appendChild(course);
-            menuCards.appendChild(menuCard);
+            menuCards.appendChild(course);
         });
 
         contentCard.appendChild(menuCards);
