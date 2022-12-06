@@ -14,6 +14,36 @@ Website for Restaurant
 
 ## Features
 
+### Dynamic Menu
+
+The menu is dynamically constructed from a menu object located in `src/data/menu.json`. You can edit this file to add your own courses and course items following the below format:
+
+    {
+        "menu": [
+            {
+                "course": "Course name (e.g. breakfast)", 
+                "items": [
+                    {
+                        "name": "Eggs and Bacon",
+                        "description": "An American delicasy made of eggs and bacon",
+                        "price": "$100"
+                    },
+                    {
+                        "name": "Toast",
+                        "description": "Delicious pan seared bread",
+                        "price": "$80"
+                    }
+                ]
+            },
+            {
+                "course": "Another course (e.g. brunch)",
+                "items": [
+                    ...
+                ]
+            }
+        ]
+    }
+
 ## Webpack
 
 This project was built using webpack. I learned a lot about this tool, and was even able to replace deprecated tools like Koala app. I used multiple webpack config files, and [webpack-merge](https://www.npmjs.com/package/webpack-merge) to combine them depending on whether I want a development or production environment. 

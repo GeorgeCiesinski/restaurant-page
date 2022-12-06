@@ -1,5 +1,5 @@
 import baseLayout from './baseLayout';
-import Menu from './menu.json';
+import Menu from './data/menu.json';
 
 // Menu content
 const menu = (function() {

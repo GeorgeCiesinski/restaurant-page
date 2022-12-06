@@ -14,6 +14,10 @@ const baseLayout = (function() {
 
         // Get body
         const body = document.body;
+
+        const background = document.createElement("div");
+        background.classList.add("background");
+        body.appendChild(background);
     
         /* Header */
         const header = document.createElement("header");
@@ -51,21 +55,25 @@ const baseLayout = (function() {
         // Button name and function call
         const navElements = [
             {
-                "name": "home",
-                "function": home.generate
+                "name": "HOME",
+                "function": home.generate,
+                "class": "button-blue"
             },
             {
-                "name": "menu",
-                "function": menu.generate
+                "name": "MENU",
+                "function": menu.generate,
+                "class": "button-white"
             },
             {
-                "name": "contact",
-                "function": contact.generate
+                "name": "CONTACT",
+                "function": contact.generate,
+                "class": "button-red"
             }
         ];
         // Creates a button for every navElement specified above
         navElements.forEach(function(item) {
             const newButton = document.createElement("button");
+            newButton.classList.add(item["class"]);
             newButton.addEventListener("click", item["function"].bind(_content));  // Binds _content to 'this' keyword
             newButton.textContent = item["name"];
             navigation.append(newButton);

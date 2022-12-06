@@ -53,6 +53,23 @@ table {
 STYLING
 */
 
+// Colors
+$header-footer-color: rgba(211, 211, 211, 0.300);
+$content-background-color: lightgrey;
+$header-button-color: lightcoral;
+$header-button-font-color: black;
+$font-color-primary: black;
+$content-color: rgba(211, 211, 211, 0.600);
+// French Flag
+$flag-blue: rgba(0, 38, 84);
+$flag-white: rgba(255, 255, 255);
+$flag-red: rgba(237, 41, 57);
+
+// Sizes
+$content-width: 65vw;
+$side-padding: calc((100vw - $content-width) / 2);
+$border-radius: 10px;
+
 * {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
@@ -63,6 +80,18 @@ body {
     min-height: 100vh;
 }
 
+.background {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    background-image: url(./assets/img/french-landscape.jpg);
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 // h1-h6 font size
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -70,18 +99,6 @@ h1, h2, h3, h4, h5, h6 {
 	border: 0;
 	vertical-align: baseline;
 }
-
-// Colors
-$header-footer-color: orange;
-$content-background-color: lightgrey;
-$header-button-color: lightcoral;
-$header-button-font-color: black;
-$font-color-primary: black;
-$content-color: rgba(211, 211, 211, 0.600);
-
-// Sizes
-$content-width: 65vw;
-$side-padding: calc((100vw - $content-width) / 2);
 
 // Header and Footer
 header, footer {
@@ -100,8 +117,25 @@ header>.top>h1 {
     gap: 5px;
     margin: 5px;
 }
+// Nav
 #nav>button {
+    width: 125px;
     font-size: 125%;
+}
+.button-blue {
+    background-color: $flag-blue;
+    border: 1px solid $flag-blue;
+    border-radius: $border-radius;
+}
+.button-white {
+    background-color: $flag-white;
+    border: 1px solid $flag-white;
+    border-radius: $border-radius;
+}
+.button-red {
+    background-color: $flag-red;
+    border: 1px solid $flag-red;
+    border-radius: $border-radius;
 }
 
 // Footer
@@ -119,11 +153,6 @@ footer>h4 {
 // Content
 #content {
     flex: 1;
-    background-image: url(./assets/img/french-landscape.jpg);
-    background-color: white;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     width: $content-width;
     padding: 20px $side-padding 20px $side-padding;
 }
@@ -131,7 +160,7 @@ footer>h4 {
 // Content Card
 .content-card {
     background-color: $content-color;
-    border-radius: 25px;
+    border-radius: $border-radius;
     padding: 20px 0px 20px 0px;
     text-align: center;
 }
@@ -193,6 +222,6 @@ figcaption:before {
 
 // Contact
 .map>iframe {
-    border-radius: 25px;
+    border-radius: $border-radius;
     max-width: 90%;
 }
