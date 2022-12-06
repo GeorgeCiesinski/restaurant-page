@@ -115,13 +115,12 @@ header>.top, header>.bottom {
     justify-content: center;
 }
 // Site Title
-header>.top>h1 {
-    margin: 5px;
+header>.top>h1, #nav {
+    margin: 10px;
 }
 #nav {
     display: flex;
-    gap: 5px;
-    margin: 5px;
+    gap: 10px;
 }
 // Nav
 #nav>button {

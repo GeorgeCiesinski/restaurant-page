@@ -27,9 +27,14 @@ const home = (function() {
         image.src = FrenchCuisine;
         contentCard.appendChild(image);
 
-        // Paragraph
+        // Paragraph 1
+        const paragraph1 = document.createElement("p");
+        paragraph1.textContent = "Established in 1791";
+        contentCard.appendChild(paragraph1);
+
+        // Paragraph 1
         const paragraph2 = document.createElement("p");
-        paragraph2.textContent = "Established in 1791";
+        paragraph2.textContent = "Taste the streets of France";
         contentCard.appendChild(paragraph2);
         
         this.appendChild(contentCard);

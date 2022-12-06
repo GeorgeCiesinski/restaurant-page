@@ -69,6 +69,21 @@
                     "price": "$275"
                 }
             ]
+        },
+        {
+            "course": "Boissons",
+            "items": [
+                {
+                    "name": "L'eau",
+                    "description": "Pristine water from the finest taps in France",
+                    "price": "$150"
+                },
+                {
+                    "name": "Châteauneuf-du-Pepe",
+                    "description": "A fine wine known for its Grenache-based red blends",
+                    "price": "$2500"
+                }
+            ]
         }
     ]
 }
