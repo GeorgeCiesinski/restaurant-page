@@ -14,7 +14,6 @@ const menu = (function() {
 
         // Menu
         const menuHeader = document.createElement("h2");  // Menu Header
-        menuHeader.classList.add("menu-header");
         menuHeader.textContent = "Menu";
         contentCard.appendChild(menuHeader);
 

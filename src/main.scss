@@ -135,6 +135,9 @@ footer>h4 {
     padding: 20px 0px 20px 0px;
     text-align: center;
 }
+.content-card>h2 {
+    margin: 10px 0px 10px 0px;
+}
 .content-card>p, .content-card>img, .content-card>figure {
     margin: 10px 0px 10px 0px;
 }
@@ -157,10 +160,6 @@ figcaption:before {
     content: '~ ';
 }
 
-// Menu Header
-.menu-header {
-    margin: 10px 0px 10px 0px;
-}
 
 // Menu
 .menu {
@@ -190,4 +189,10 @@ figcaption:before {
 .item-price {
     grid-column: 2 / 3;
     grid-row: 1 / 3;
+}
+
+// Contact
+.map>iframe {
+    border-radius: 25px;
+    max-width: 90%;
 }
