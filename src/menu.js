@@ -13,7 +13,8 @@ const menu = (function() {
         contentCard.classList.add("content-card");
 
         // Menu
-        const menuHeader = document.createElement("h2");
+        const menuHeader = document.createElement("h2");  // Menu Header
+        menuHeader.classList.add("menu-header");
         menuHeader.textContent = "Menu";
         contentCard.appendChild(menuHeader);
 
@@ -22,13 +23,13 @@ const menu = (function() {
         menuCards.classList.add("menu");
         Menu.menu.forEach(function(menuItem) {
             // New Course
-            const card = document.createElement("div");
-            card.classList.add("menu-card");
-            const course = document.createElement("h3");
+            const menuCard = document.createElement("div");
+            menuCard.classList.add("course");
+            const course = document.createElement("h3");  // Course Header
             course.textContent = menuItem.course;
-            _courseItems(course, menuItem.items)
-            card.appendChild(course);
-            menuCards.appendChild(card);
+            _courseItems(course, menuItem.items);  // Add items to course
+            menuCard.appendChild(course);
+            menuCards.appendChild(menuCard);
         });
 
         contentCard.appendChild(menuCards);
@@ -36,21 +37,25 @@ const menu = (function() {
         this.appendChild(contentCard);
     }
 
+    // Iterate through items array and build page elements
     function _courseItems(course, items) {
         items.forEach(function(courseItem){
             // New Menu Item
             const itemDiv = document.createElement("div");
-            itemDiv.classList.add("menu-item");
+            itemDiv.classList.add("course-item");
             // Item Name
             const itemName = document.createElement("h4");
+            itemName.classList.add("item-name");
             itemName.textContent = courseItem.name;
             itemDiv.appendChild(itemName);
             // Item Description
             const itemDescription = document.createElement("h5");
+            itemDescription.classList.add("item-description");
             itemDescription.textContent = courseItem.description;
             itemDiv.appendChild(itemDescription);
             // Item Price
             const itemPrice = document.createElement("h4");
+            itemPrice.classList.add("item-price");
             itemPrice.textContent = courseItem.price;
             itemDiv.appendChild(itemPrice);
             // Append to course
