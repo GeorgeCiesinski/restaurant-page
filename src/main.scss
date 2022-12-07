@@ -124,7 +124,7 @@ header>.top, header>.bottom {
 header>.top>h1 {
     color: $flag-blue;
     font-family: 'Cursif', Georgia, Times, 'Times New Roman', serif;
-    text-shadow: 1px 1px $flag-red;
+    text-shadow: 1px 1px $font-color-secondary;
     margin-top: 40px;
     font-size: 200%;
     text-align: center;  // Centers site title when wraps
