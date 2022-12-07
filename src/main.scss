@@ -138,7 +138,7 @@ header>.top>h1 {
 // Nav
 #nav>button {
     color: $font-color-secondary;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 125%;
     text-shadow: -1px -1px $font-color-primary, 1px -1px $font-color-primary, -1px 1px $font-color-primary, 1px 1px $font-color-primary;
     width: 125px;
@@ -199,8 +199,10 @@ footer>h3 {
 .content-card>h2, .content-card>h4, .content-card>figure, .content-card>p  {
     text-align: center;
 }
+.content-card>h2 {
+    font-family: 'Cursif', Georgia, Times, 'Times New Roman', serif;
+}
 .content-card>img, .map>iframe {
-    
     border-radius: $border-radius;
 }
 
@@ -232,6 +234,7 @@ figcaption:before {
 }
 
 .course>h3 {
+    font-family: 'Cursif', Georgia, Times, 'Times New Roman', serif;
     text-align: center;
 }
 
@@ -268,5 +271,6 @@ figcaption:before {
 }
 
 .contact-element {
+    width: 180px;
     margin: 10px 0px 10px 0px;
 }

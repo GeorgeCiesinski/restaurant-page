@@ -40,6 +40,7 @@ const contact = (function() {
         contentCard.appendChild(messageDiv);
     }
 
+    // Creates .contact and .contact-inner divs to contain address/phone/email info
     function _appendContactInfo(contentCard) {
         const contactDiv = document.createElement("div");
         contactDiv.classList.add("contact");
@@ -67,10 +68,10 @@ const contact = (function() {
     function _appendPhone(element) {
         const phoneDiv = document.createElement("div");
         phoneDiv.classList.add("contact-element");
-        const phoneHeader = document.createElement("h3");
+        const phoneHeader = document.createElement("h3");  // Header
         phoneHeader.textContent = "Phone:"
         phoneDiv.appendChild(phoneHeader);
-        const phone = document.createElement("h4");
+        const phone = document.createElement("h4");  // Phone Info
         phone.textContent = "867-EAT-FOOD";
         phoneDiv.appendChild(phone);
         element.appendChild(phoneDiv);
@@ -79,10 +80,10 @@ const contact = (function() {
     function _appendEmail(element) {
         const emailDiv = document.createElement("div");
         emailDiv.classList.add("contact-element");
-        const emailHeader = document.createElement("h3");
+        const emailHeader = document.createElement("h3");  // Header
         emailHeader.textContent = "E-mail:"
         emailDiv.appendChild(emailHeader);
-        const email = document.createElement("h4");
+        const email = document.createElement("h4");  // Email info
         const emailAddress = "eat@restaurantfrancais.fr";
         email.innerHTML = `<a href = "mailto: ${emailAddress}">${emailAddress}</a>`;
         emailDiv.appendChild(email);
