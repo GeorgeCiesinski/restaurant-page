@@ -92,4 +92,5 @@ Another thing I discovered is that Koala App was a deprecated tool despite how w
 French Cuisine photo by <a href="https://unsplash.com/es/@jaywennington?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jay Wennington</a> on <a href="https://unsplash.com/s/photos/french-cuisine?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
 Background photo by <a href="https://unsplash.com/@peterlaster?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pedro Lastra</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  
+
+Cursif Font by <a href="https://www.fontspace.com/christophe-beaumale">Christophe Beaumale</a> on <a href="https://www.fontspace.com">Font Space</a>

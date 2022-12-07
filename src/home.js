@@ -38,13 +38,13 @@ const home = (function() {
     }
 
     function _appendP1(contentCard) {
-        const paragraph1 = document.createElement("p");
+        const paragraph1 = document.createElement("h4");
         paragraph1.textContent = "Established in 1791";
         contentCard.appendChild(paragraph1);
     }
 
     function _appendP2(contentCard) {
-        const paragraph2 = document.createElement("p");
+        const paragraph2 = document.createElement("h4");
         paragraph2.textContent = "Taste the streets of France";
         contentCard.appendChild(paragraph2);
     }

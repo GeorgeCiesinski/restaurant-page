@@ -67,8 +67,16 @@ $content-width: 55vw;
 $side-padding: calc((100vw - $content-width) / 2);
 $border-radius: 10px;
 
+// Custom Font
+@font-face {
+    font-family: 'Cursif';
+    src: url('./assets/font/Cursif.woff2') format('woff2'),
+        url('./assets/font/Cursif.woff') format('woff');
+    font-style: normal;
+}
+
 * {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 html, body {
@@ -112,17 +120,20 @@ header>.top, header>.bottom {
     display: flex;
     justify-content: center;
 }
-header>.top>h1, #nav {
-    margin: 15px;
-}
 // Site Title
 header>.top>h1 {
+    color: $flag-blue;
+    font-family: 'Cursif', Georgia, Times, 'Times New Roman', serif;
+    text-shadow: 1px 1px $flag-red;
+    margin-top: 40px;
+    font-size: 200%;
     text-align: center;  // Centers site title when wraps
 }
 // Nav div containing buttons
 #nav {
     display: flex;
     gap: 10px;
+    margin: 15px;
 }
 // Nav
 #nav>button {
@@ -179,13 +190,13 @@ footer>h3 {
     padding: 20px 0px 20px 0px;
 }
 // Content Card content width and spacing
-.content-card>h2, .content-card>p, .content-card>img, .content-card>div,
-.content-card>figure, .content-card>.menu {
+.content-card>h2, .content-card>h4, .content-card>p, .content-card>img,
+.content-card>div, .content-card>figure, .content-card>.menu {
     width: 80%;
     margin: 10px 0px 10px 0px;
 }
 // Center Text
-.content-card>h2, .content-card>figure, .content-card>p  {
+.content-card>h2, .content-card>h4, .content-card>figure, .content-card>p  {
     text-align: center;
 }
 .content-card>img, .map>iframe {
