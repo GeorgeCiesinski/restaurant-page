@@ -10,11 +10,18 @@ const menu = (function() {
         const contentCard = document.createElement("div");
         contentCard.classList.add("content-card");
 
-        // Menu
+        _appendHeader(contentCard);
+        _appendCourses(contentCard);
+        this.appendChild(contentCard);
+    }
+
+    function _appendHeader(contentCard) {
         const menuHeader = document.createElement("h2");  // Menu Header
         menuHeader.textContent = "Menu";
         contentCard.appendChild(menuHeader);
+    }
 
+    function _appendCourses(contentCard) {
         // Courses Section
         const menuCards = document.createElement("div");
         menuCards.classList.add("menu");
@@ -28,13 +35,10 @@ const menu = (function() {
             _courseItems(course, menuItem.items);  // Add items to course
             menuCards.appendChild(course);
         });
-
         contentCard.appendChild(menuCards);
-
-        this.appendChild(contentCard);
     }
 
-    // Iterate through items array and build page elements
+    // Iterate through items array and build course item elements
     function _courseItems(course, items) {
         items.forEach(function(courseItem){
             // New Menu Item
