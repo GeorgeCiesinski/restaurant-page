@@ -173,9 +173,14 @@ footer>h4 {
     border-radius: $border-radius;
     padding: 20px 0px 20px 0px;
 }
-.content-card>h2, .content-card>p, .content-card>img, .content-card>figure .map>iframe {
-    max-width: 90%;
+// Content Card content width and spacing
+.content-card>h2, .content-card>p, .content-card>img, .content-card>div,
+.content-card>figure, .content-card>.menu {
+    width: 80%;
     margin: 10px 0px 10px 0px;
+}
+.content-card>h2  {
+    text-align: center;
 }
 .content-card>img, .map>iframe {
     
@@ -232,4 +237,9 @@ figcaption:before {
     text-align: end;
     grid-column: 2 / 3;
     grid-row: 1 / 3;
+}
+
+// Contact
+.map>iframe {
+    max-width: 100%;
 }

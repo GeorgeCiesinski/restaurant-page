@@ -11,7 +11,15 @@ const home = (function() {
         const contentCard = document.createElement("div");
         contentCard.classList.add("content-card");
 
-        // Figure
+        // Append Elements
+        _appendFigure(contentCard);
+        _appendImage(contentCard);
+        _appendP1(contentCard);
+        _appendP2(contentCard);
+        this.appendChild(contentCard);
+    }
+
+    function _appendFigure(contentCard) {
         const figure = document.createElement("figure");
         const blockquote = document.createElement("blockquote");
         blockquote.textContent = "The #1 most French restaurant on Earth";
@@ -21,23 +29,24 @@ const home = (function() {
         figcaption.textContent = "Owner of Un Restaurant Français Extraordinaire";
         figure.appendChild(figcaption);
         contentCard.appendChild(figure);
+    }
 
-        // Image
+    function _appendImage(contentCard) {
         const image = new Image();
         image.src = FrenchCuisine;
         contentCard.appendChild(image);
+    }
 
-        // Paragraph 1
+    function _appendP1(contentCard) {
         const paragraph1 = document.createElement("p");
         paragraph1.textContent = "Established in 1791";
         contentCard.appendChild(paragraph1);
+    }
 
-        // Paragraph 1
+    function _appendP2(contentCard) {
         const paragraph2 = document.createElement("p");
         paragraph2.textContent = "Taste the streets of France";
         contentCard.appendChild(paragraph2);
-        
-        this.appendChild(contentCard);
     }
 
     return {

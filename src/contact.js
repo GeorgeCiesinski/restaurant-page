@@ -14,9 +14,7 @@ const contact = (function() {
         _appendHeader(contentCard);
         _appendMap(contentCard);
         _appendMessage(contentCard);
-        _appendAddress(contentCard);
-        _appendPhone(contentCard);
-        _appendEmail(contentCard);
+        _appendContactInfo(contentCard);
         this.appendChild(contentCard);
     }
 
@@ -40,7 +38,15 @@ const contact = (function() {
         contentCard.appendChild(mapMessage);
     }
 
-    function _appendAddress(contentCard) {
+    function _appendContactInfo(contentCard) {
+        const contactDiv = document.createElement("div");
+        _appendAddress(contactDiv);
+        _appendPhone(contactDiv);
+        _appendEmail(contactDiv);
+        contentCard.appendChild(contactDiv);
+    }
+
+    function _appendAddress(element) {
         const addressDiv = document.createElement("div");  
         const addressHeader = document.createElement("h3");  // Header
         addressHeader.textContent = "Address:"
@@ -48,10 +54,10 @@ const contact = (function() {
         const address = document.createElement("h4");  // Address Info
         address.textContent = "#2 Qikiqtaaluk Region, NU X0A 0J0";
         addressDiv.appendChild(address);
-        contentCard.appendChild(addressDiv);
+        element.appendChild(addressDiv);
     }
 
-    function _appendPhone(contentCard) {
+    function _appendPhone(element) {
         const phoneDiv = document.createElement("div");
         const phoneHeader = document.createElement("h3");
         phoneHeader.textContent = "Phone:"
@@ -59,10 +65,10 @@ const contact = (function() {
         const phone = document.createElement("h4");
         phone.textContent = "867-EAT-FOOD";
         phoneDiv.appendChild(phone);
-        contentCard.appendChild(phoneDiv);
+        element.appendChild(phoneDiv);
     }
 
-    function _appendEmail(contentCard) {
+    function _appendEmail(element) {
         const emailDiv = document.createElement("div");
         const emailHeader = document.createElement("h3");
         emailHeader.textContent = "E-mail:"
@@ -71,7 +77,7 @@ const contact = (function() {
         const emailAddress = "eat@restaurantfrancais.fr";
         email.innerHTML = `<a href = "mailto: ${emailAddress}">${emailAddress}</a>`;
         emailDiv.appendChild(email);
-        contentCard.appendChild(emailDiv);
+        element.appendChild(emailDiv);
     }
 
     return {
