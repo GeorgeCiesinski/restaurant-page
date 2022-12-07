@@ -33,21 +33,28 @@ const contact = (function() {
     }
 
     function _appendMessage(contentCard) {
+        const messageDiv = document.createElement("div");
         const mapMessage = document.createElement("p");
         mapMessage.textContent = 'We are located in the Mars Arctic Research base. These scientists just stay inside their fancy domes for months at a time, and only stop by at this restaurant once every week or two so we could use the business!';
-        contentCard.appendChild(mapMessage);
+        messageDiv.appendChild(mapMessage);
+        contentCard.appendChild(messageDiv);
     }
 
     function _appendContactInfo(contentCard) {
         const contactDiv = document.createElement("div");
-        _appendAddress(contactDiv);
-        _appendPhone(contactDiv);
-        _appendEmail(contactDiv);
+        contactDiv.classList.add("contact");
+        const innerDiv = document.createElement("div");
+        innerDiv.classList.add("contact-inner");
+        _appendAddress(innerDiv);
+        _appendPhone(innerDiv);
+        _appendEmail(innerDiv);
+        contactDiv.appendChild(innerDiv);
         contentCard.appendChild(contactDiv);
     }
 
     function _appendAddress(element) {
-        const addressDiv = document.createElement("div");  
+        const addressDiv = document.createElement("div");
+        addressDiv.classList.add("contact-element");
         const addressHeader = document.createElement("h3");  // Header
         addressHeader.textContent = "Address:"
         addressDiv.appendChild(addressHeader);
@@ -59,6 +66,7 @@ const contact = (function() {
 
     function _appendPhone(element) {
         const phoneDiv = document.createElement("div");
+        phoneDiv.classList.add("contact-element");
         const phoneHeader = document.createElement("h3");
         phoneHeader.textContent = "Phone:"
         phoneDiv.appendChild(phoneHeader);
@@ -70,6 +78,7 @@ const contact = (function() {
 
     function _appendEmail(element) {
         const emailDiv = document.createElement("div");
+        emailDiv.classList.add("contact-element");
         const emailHeader = document.createElement("h3");
         emailHeader.textContent = "E-mail:"
         emailDiv.appendChild(emailHeader);

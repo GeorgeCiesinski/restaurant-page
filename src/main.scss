@@ -179,7 +179,8 @@ footer>h4 {
     width: 80%;
     margin: 10px 0px 10px 0px;
 }
-.content-card>h2  {
+// Center Text
+.content-card>h2, .content-card>figure, .content-card>p  {
     text-align: center;
 }
 .content-card>img, .map>iframe {
@@ -242,4 +243,13 @@ figcaption:before {
 // Contact
 .map>iframe {
     max-width: 100%;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-element {
+    margin: 10px 0px 10px 0px;
 }
