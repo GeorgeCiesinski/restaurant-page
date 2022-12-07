@@ -6,10 +6,11 @@ import contact from './contact';
 // Creates primary website layout
 const baseLayout = (function() {
 
+    // Create content in local scope
     let _content = document.createElement("div");
     const _title = "Un Restaurant Français Extraordinaire";
 
-    // Creates the header, content and footer sections of the site
+    // Creates the main body of the page (public)
     function create() {
 
         // Get body
@@ -19,6 +20,13 @@ const baseLayout = (function() {
         background.classList.add("background");
         body.appendChild(background);
     
+        _appendHeader(body);
+        _appendContent(body);
+        _appendFooter(body);
+    }
+
+    // Creates header, header top, and header bottom
+    function _appendHeader(body) {
         /* Header */
         const header = document.createElement("header");
         // Top Header
@@ -34,20 +42,9 @@ const baseLayout = (function() {
         _nav(headerBottom);
         header.appendChild(headerBottom);
         body.appendChild(header);
-    
-        /* Content */
-        _content.id = "content";
-        body.appendChild(_content);
-    
-        /* Footer */
-        const footer = document.createElement("footer");
-        const copyrightMessage = document.createElement("h4");
-        copyrightMessage.innerHTML = copyright.generate();
-        footer.appendChild(copyrightMessage);
-        body.appendChild(footer);
     }
 
-    // Private navbar generator
+    // Creates nav buttons and binds callback function to content element
     function _nav(domElement) {
         const navigation = document.createElement("div");
         navigation.setAttribute("role", "navigation");
@@ -82,12 +79,26 @@ const baseLayout = (function() {
         domElement.append(navigation);
     }
 
-    // Generates home page on first launch
+    // Appends content which acts as a parent element in other page modules
+    function _appendContent(body) {
+        _content.id = "content";
+        body.appendChild(_content);
+    }
+
+    function _appendFooter(body) {
+        const footer = document.createElement("footer");
+        const copyrightMessage = document.createElement("h4");
+        copyrightMessage.innerHTML = copyright.generate();
+        footer.appendChild(copyrightMessage);
+        body.appendChild(footer);
+    }
+
+    // Generates home page on first launch (public)
     function homePage() {
         home.generate.bind(_content)();
     }
 
-    // Clears _content element
+    // Clears _content element (public)
     function clearContent() {
         while (_content.firstChild) {
             _content.removeChild(_content.lastChild);
