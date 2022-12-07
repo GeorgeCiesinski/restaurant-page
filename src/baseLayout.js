@@ -87,7 +87,7 @@ const baseLayout = (function() {
 
     function _appendFooter(body) {
         const footer = document.createElement("footer");
-        const copyrightMessage = document.createElement("h4");
+        const copyrightMessage = document.createElement("h3");
         copyrightMessage.innerHTML = copyright.generate();
         footer.appendChild(copyrightMessage);
         body.appendChild(footer);

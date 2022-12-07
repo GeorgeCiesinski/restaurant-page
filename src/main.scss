@@ -107,14 +107,19 @@ h1, h2, h3, h4, h5, h6 {
 header, footer {
     background-color: $transparent-color;
 }
+// Title and Nav
 header>.top, header>.bottom {
     display: flex;
     justify-content: center;
 }
-// Site Title
 header>.top>h1, #nav {
-    margin: 10px;
+    margin: 15px;
 }
+// Site Title
+header>.top>h1 {
+    text-align: center;  // Centers site title when wraps
+}
+// Nav div containing buttons
 #nav {
     display: flex;
     gap: 10px;
@@ -150,8 +155,8 @@ footer {
     display: flex;
     justify-content: center;
 }
-footer>h4 {
-    margin: 20px;
+footer>h3 {
+    margin: 40px;
 }
 .github-link {
     color: $font-color-primary;
@@ -191,6 +196,7 @@ footer>h4 {
 // Figure
 blockquote {
     font-size: 125%;
+    font-weight: bold;
 }
 blockquote:before, blockquote:after {
     content: '"';
