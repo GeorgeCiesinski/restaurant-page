@@ -27,6 +27,11 @@
                     "name": "Vichyssoise",
                     "description": "Thick chicken vegetable soup",
                     "price": "$200"
+                },
+                {
+                    "name": "Bouillabaisse",
+                    "description": "Classic fish stew",
+                    "price": "$230"
                 }
             ]
         },
@@ -37,6 +42,11 @@
                     "name": "Coq au vin",
                     "description": "Chicken braised with Wine",
                     "price": "$500"
+                },
+                {
+                    "name": "Duck à l'Orange",
+                    "description": "Duck in orange sauce",
+                    "price": "$525"
                 }
             ]
         },
