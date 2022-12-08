@@ -1,14 +1,50 @@
 # restaurant-page
-Website for Restaurant
+
+Mock Website for Fictional Restaurant
+
+## Objective
+
+The objective of this project was to improve my understanding of webpack and the revealing module pattern.
 
 ## Getting Started
 
 <ol>
     <li>
-    Clone the repo
+        Clone the repo into a local directory:
+        <code>
+            <br>cd (your-directory)
+            <br>git clone git@github.com:GeorgeCiesinski/restaurant-page.git
+        </code>
     </li>
     <li>
-    TBD
+        CD into the directory and install the required dependencies: 
+        <code>
+            <br>cd restaurant-page
+            <br>npm install
+        </code>
+    </li>
+    <li>
+        You have a few choices to run the site:
+        <ol style="list-style-type: lower-alpha;">
+            <li>
+                Run Dev Server: This bundles assets and source files in memory and automatically opens the page in your default browser.
+                <code>
+                    <br>npm start
+                </code>
+            </li>
+            <li>
+            Watch Source Files: This watches your source files for changes and bundles assets and source files into the dist folder. You need to find and open the page in <code>dist</code> and manually refresh.
+                <code>
+                    <br>npm run --watch
+                </code>
+            </li>
+            <li>
+                Build Site: This bundles assets and source files into <code>dist</code>, and renames them with hashes in the name for production.
+                <br><code>
+                    npm run build
+                </code>
+            </li>
+        </ol>
     </li>
 </ol>
 
@@ -44,7 +80,15 @@ The menu is dynamically constructed from a menu object located in `src/data/menu
         ]
     }
 
-## Webpack
+### Responsive Design
+
+The website should work on a variety of screen sizes. 
+
+### Tab Based Navigation
+
+Rather than linking to other pages, the nav buttons generate content and inject it into the page. 
+
+## Built with Webpack
 
 This project was built using webpack. I learned a lot about this tool, and was even able to replace deprecated tools like Koala app. I used multiple webpack config files, and [webpack-merge](https://www.npmjs.com/package/webpack-merge) to combine them depending on whether I want a development or production environment. 
 
@@ -54,7 +98,7 @@ The development environment is started as a dev server using `npm start` or in W
 
 <ol>
     <li>Source Maps</li>
-    <li>File names without hash</li>
+    <li>File names are unhashed</li>
     <li>Non-minified HTML, JS and CSS for simpler debugging</li>
 </ol>
 
@@ -69,7 +113,7 @@ The production code is built using `npm run build`. It bundles the source code i
 
 ## Learning Points
 
-The purpose of this section is to note a few of the things I learned in order to complete this project successfully. This project was particularly challenging as I had to learn lots of new concepts and tools, and this process took me weeks of reading and many days of failed attempts. Despite this, I somehow overcame my challenges, so I wanted to talk about them a bit.
+The purpose of this section is to note a few of the things I learned in order to complete this project successfully. This project was particularly challenging as I had to learn lots of new concepts and tools, and this process took me weeks of reading and many days of failed attempts. 
 
 ### What is a Favicon?
 
