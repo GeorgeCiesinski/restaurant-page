@@ -9,6 +9,7 @@ const baseLayout = (function() {
     // Create content in local scope
     let _content = document.createElement("div");
     const _title = "Un Restaurant Français Extraordinaire";
+    const _buttonArray = [];
 
     // Creates the main body of the page (public)
     function create() {
@@ -70,10 +71,17 @@ const baseLayout = (function() {
         // Creates a button for every navElement specified above
         navElements.forEach(function(item) {
             const newButton = document.createElement("button");
-            newButton.classList.add(item["class"]);
+            const newClass = item["name"].toLowerCase()+"-button";
+            newButton.classList.add("nav-button", item["class"], newClass);
             newButton.addEventListener("click", item["function"].bind(_content));  // Binds _content to 'this' keyword
             newButton.textContent = item["name"];
             navigation.append(newButton);
+            const buttonObj = {
+                "name": newClass,
+                "text": item["name"],
+                "element": newButton
+            };
+            _buttonArray.push(buttonObj); // Push to button array
         });
         // Appends to the provided dom element
         domElement.append(navigation);
@@ -105,11 +113,23 @@ const baseLayout = (function() {
         }
     }
 
+    // Changes button text to indicate current page
+    function updateButtons(name) {
+        // Reset button content
+        _buttonArray.forEach(function(button) {
+            button.element.textContent = button["text"];
+        });
+        // Clicked Button
+        const clickedButton = _buttonArray.find(x => x.name === name);
+        clickedButton.element.textContent = "> " + clickedButton["text"] + " <";
+    }
+
     // Reveals public functions and variables
     return {
         create: create,
         homePage: homePage,
-        clearContent: clearContent
+        clearContent: clearContent,
+        updateButtons: updateButtons
     }
     
 })();

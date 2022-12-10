@@ -13,6 +13,9 @@ const menu = (function() {
         _appendHeader(contentCard);
         _appendCourses(contentCard);
         this.appendChild(contentCard);
+
+        // Update Buttons
+        baseLayout.updateButtons("menu-button");
     }
 
     function _appendHeader(contentCard) {

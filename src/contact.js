@@ -16,6 +16,9 @@ const contact = (function() {
         _appendMessage(contentCard);
         _appendContactInfo(contentCard);
         this.appendChild(contentCard);
+
+        // Update Buttons
+        baseLayout.updateButtons("contact-button");
     }
 
     function _appendHeader(contentCard) {

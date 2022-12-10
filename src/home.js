@@ -17,6 +17,9 @@ const home = (function() {
         _appendP1(contentCard);
         _appendP2(contentCard);
         this.appendChild(contentCard);
+
+        // Update Buttons
+        baseLayout.updateButtons("home-button");
     }
 
     function _appendFigure(contentCard) {
